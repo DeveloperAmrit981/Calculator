@@ -5,6 +5,12 @@
     font-family: sans-serif;
 }
 
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(  white, red);
+}
+
 .app{
     display: flex;
     justify-content: center;
@@ -13,7 +19,7 @@
 }
 
 .calculator{
-    background-color: black;
+    background-color: rgba(29, 42, 47, 0.8);
     width: 100%;
     max-width: 375px;
     min-height: 640px;
@@ -24,19 +30,26 @@
 }
 
 .display{
-    min-height: 200px;
-    padding: 1.5rem;
+    min-height: 100px;
+    padding: 1rem;
+    margin: 1.5rem;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     color: white;
     text-align: right;
     flex: 1 1 0%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
 }
+
+
 
 .display .input{
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    overflow: auto;
 }
 
 .display .output{
@@ -59,7 +72,8 @@
 .keys{
     background-color: #292D36;
     padding: 1.5rem;
-    border-radius: 1..5rem 1.5rem 0 0;
+    margin: 1rem;
+    border-radius: 1.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5,1fr);
@@ -73,8 +87,8 @@
     display: block;
     height: 0;
     padding-top: 100%;
-    background-color: #262933;
-    border-radius: 1rem;
+    background-color: rgb(91, 86, 84);
+    border-radius: 50%;
     transition: 0.2s;
     user-select: none;
 }
@@ -90,10 +104,28 @@
 }
 
 .keys .key.operator span{
-color: #EB6666;
+    color: #FFFFFF;
 }
+
+.keys .key.operator{
+    background-color: #ff9f22;
+}
+
 .keys .key.action span{
-    color: #25FED7;
+    color: black;
+}
+
+.keys .key.action{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.keys .key.deleteKey{
+    background-color: #f5b3b3;
+}
+
+.keys .key.deleteKey span{
+    color: rgb(232, 9, 9);
+    font-size: 1.5rem;
 }
 
 .keys .key:hover{
